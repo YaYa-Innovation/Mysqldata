@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <h1>Welcome to My Flask App</h1>
+
+    <div class="button-group">
+        <a href="/insert" class="button">Insert Data</a>
+        <a href="/update" class="button">Update Data</a>
+        <a href="/select" class="button">Select Data</a>
+        <a href="/delete" class="button">Delete Data</a>
+        <a href="/create_table" class="button">Create Table</a>
+    </div>
+
+</body>
+
+</html>
