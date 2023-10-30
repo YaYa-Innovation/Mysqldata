@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Selected Data</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <th>Delete</th> <!-- New Column for Delete Button -->
+  </tr>
+  {% for row in result %}
+  <tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+    <td>{{ row[3] }}</td>
+    <td>
+      <form action="/delete" method="post">
+        <input type="hidden" name="id" value="{{ row[0] }}">
+        <input type="submit" value="Delete">
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
