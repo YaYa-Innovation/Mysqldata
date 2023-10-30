@@ -1,7 +1,5 @@
-# app.py
-
 from flask import Flask, render_template, request, redirect, url_for
-from database import insert, update, select, delete
+from database import insert, update, select, delete, create_table
 
 app = Flask(__name__)
 
@@ -40,6 +38,15 @@ def delete_data():
     id = request.form['id']
     delete(id)
     return redirect(url_for('select_data'))
+
+@app.route('/create_table', methods=['GET', 'POST'])
+def create_table_page():
+    if request.method == 'POST':
+        table_name = request.form['table_name']
+        columns = request.form['columns'].split(',')
+        create_table(table_name, columns)
+        return redirect(url_for('index'))
+    return render_template('create_table.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
