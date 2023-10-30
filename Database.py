@@ -32,3 +32,8 @@ def delete(id):
     user = (id,)
     res.execute(sql, user)
     con.commit()
+def create_table(table_name, columns):
+    cursor = con.cursor()
+    column_definitions = ', '.join(columns)
+    cursor.execute(f"CREATE TABLE {table_name} ({column_definitions})")
+    con.commit()
