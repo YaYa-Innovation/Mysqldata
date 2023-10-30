@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <title>Update Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
 <body>
 
-<h2>Update Data</h2>
+    <h2>Update Data</h2>
 
-<form action="/update" method="post">
-  ID:<br>
-  <input type="text" name="id">
-  <br>
-  Name:<br>
-  <input type="text" name="name">
-  <br>
-  Age:<br>
-  <input type="text" name="age">
-  <br>
-  City:<br>
-  <input type="text" name="city">
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
+    <form action="/update" method="post">
+        ID:<br>
+        <input type="text" name="id">
+        <br>
+        Name:<br>
+        <input type="text" name="name">
+        <br>
+        Age:<br>
+        <input type="text" name="age">
+        <br>
+        City:<br>
+        <input type="text" name="city">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
+
 </html>
