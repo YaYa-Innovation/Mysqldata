@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Spare</title>
+</head>
+<body>
+    <h1>Edit Spare</h1>
+    <form method="POST">
+        Spare Number: <input type="text" name="spare_number" value="{{ spare['spare_number'] }}" required><br>
+        Spare Name: <input type="text" name="spare_name" value="{{ spare['spare_name'] }}" required><br>
+        Category: <input type="text" name="category" value="{{ spare['category'] }}" required><br>
+        Sub Category: <input type="text" name="sub_category" value="{{ spare['sub_category'] }}" required><br>
+        Spare Description: <textarea name="spare_description" required>{{ spare['spare_description'] }}</textarea><br>
+        Location: <input type="text" name="location" value="{{ spare['location'] }}" required><br>
+        Quantity: <input type="number" name="quantity" value="{{ spare['quantity'] }}" required><br>
+        Receiver Name: <input type="text" name="receiver_name" value="{{ spare['receiver_name'] }}" required><br>
+        Bearer Number: <input type="text" name="bearer_number" value="{{ spare['bearer_number'] }}" required><br>
+        <input type="submit" value="Save Changes">
+    </form>
+</body>
+</html>
